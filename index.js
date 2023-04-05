@@ -35,6 +35,7 @@ function handleFormSubmit(event) {
 	event.preventDefault()
 	const data = serializeForm(this)
 	fetchData(URL, data)
+	this.reset()
 }
 
 form.addEventListener('submit', handleFormSubmit)

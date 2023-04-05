@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<script defer src="index.js"></script>
+		<title>form js</title>
+	</head>
+	<body>
+		<form id="cv-form" method="POST">
+			<fieldset>
+				<legend>You need to fill out a form</legend>
+
+				<label>
+					Your name:
+					<input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="Dan Abramov"
+						required
+						autofocus
+					/>
+				</label>
+
+				<label>
+					Your email:
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="abramov@gmail.com"
+						required
+					/>
+				</label>
+
+				<label>
+					what is your commercial experience?:
+					<input type="number" name="age" required />
+				</label>
+
+				<label>
+					Have you worked with React?
+					<input type="checkbox" name="react-experience" value="1" />
+				</label>
+
+				<label>
+					Profession:
+					<select name="specialization" required>
+						<option value="engineer" selected>Software Engineer</option>
+						<option value="developer-react">React Developer</option>
+						<option value="developer-node">Node.js Developer</option>
+						<option value="other">Other</option>
+					</select>
+				</label>
+
+				<label>
+					CV:
+					<input type="file" accept=".pdf" name="pdf" required />
+				</label>
+
+				<button type="submit">Send</button>
+			</fieldset>
+		</form>
+	</body>
+</html>

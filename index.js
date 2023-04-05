@@ -9,9 +9,8 @@ function serializeForm(formNode) {
 	// преобразуем их в массив тк это коллекция
 	const data = Array.from(elements)
 		.filter((item) => !!item.name) // убираем элементы без атрибута name
-		.map((element) => {
-			const { name, type } = element
-		 // получаем значение чекбокса
+		.map(({ name, type }) => {
+			// получаем значение чекбокса
 			const value = type === 'checkbox' ? element.checked : element.value
 			return { name, value }
 		})
